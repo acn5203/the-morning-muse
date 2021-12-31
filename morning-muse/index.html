@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Morning Muse</title>
+    </head>
+    
+    <link rel="stylesheet" type="text/css" href = "style.css">
+    
+    <img src="newlogo.png" alt="logo" class="center"/>
+    <body>
+        
+        <div class = "form">
+        <form action="index.php" method="POST">
+            <label for = "name">Their Name</label>
+            <input type = "text" name = "fullname" value="<?php echo $name ?>" placeholder = "Their Name">
+            <div class="red-text"><?php echo $errors['fullname']; ?></div>
+            
+            <label for = "number">Number +1:</label>
+            <input type = "text" name = "phonenumber" value="<?php echo $number ?>" placeholder = "Their Phone Number">
+            <div class="red-text"><?php echo $errors['phonenumber']; ?></div>
+            
+            <label for = "personal_message">Your Name</label>
+            <input type = "text" name = "personal_message" value="<?php echo $personal_message ?>" placeholder = "Your Name">
+
+            <label for = "timezone">Time Zone</label>
+            <select name = "timezone" value="<?php echo $timezone ?>">
+                <option value = "est">EST (GMT-05:00)</option>
+                <option value = "ct">CT (GMT-06:00)</option>
+                <option value = "mt">MT (GMT-07:00)</option>
+                <option value = "pst">PST (GMT-08:00)</option>
+            </select>
+            <input type = "submit" value = "Submit" name = "submit">
+
+            
+        
+        </form>
+        </div>
+        
+        
+        <div class = "">
+        </div>
+            
+    </body>
+
+</html>
